@@ -2,6 +2,9 @@
   "name": "code-challenge",
   "version": "1.0.0",
   "description": "Simple React/Redux app with Routing",
+  "engines": {
+    "node": "6.2.0"
+  },
   "main": "index.js",
   "repository": "git@github.com:plaffey/CodeChallenge.git",
   "scripts": {
