@@ -3,9 +3,7 @@ var path = require("path");
 
 module.exports = {
   entry: [
-    "script!jquery/dist/jquery.min.js",
-    "script!foundation-sites/dist/foundation.min.js",
-    "./app/app.jsx"
+    "./src/index.js"
   ],
   externals: {
     jquery: "jQuery"
@@ -18,7 +16,8 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: "./public/bundle.js"
+    publicPath: '/',
+    filename: "bundle.js"
   },
   resolve: {
     root: __dirname,
@@ -32,10 +31,10 @@ module.exports = {
       {
         loader: "babel-loader",
         query: {
-          presets: ["react", "es2015", "stage-0"]
+          presets: ["react", "es2015", "stage-1"]
         },
         test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/
+        exclude: /node_modules/
       }
     ]
   },
